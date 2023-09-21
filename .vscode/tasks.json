@@ -1,0 +1,94 @@
+// // Author: Mehedi Hasan Shifat
+// // Date: 11th Feb, 2020
+// // Task: Shortcut to run a C++ file which will take input and show output of the program automatically with program runtime status such as memory consumption and execution time
+// {
+//     "version": "2.0.0",
+//     "tasks": [
+//       {
+//         "label": "Compile and run",
+//         "type": "shell",
+//         "command": "g++",
+//         "args": [
+//           "-o",
+//           "jspwTest",
+//           "\"${file}\"", // Enclose ${file} in double quotes
+//           "&&",
+//           "./jspwTest",
+//           "<",
+//           "input.txt",
+//           ">",
+//           "output.txt",
+//           "&&",
+//           "rm",
+//           "jspwTest",
+//           "&&",
+//           "rm",
+//           "\"${file}\"" // Enclose ${file} in double quotes
+//         ],
+//         "presentation": {
+//           "reveal": "never"
+//         },
+//         "group": {
+//           "kind": "build",
+//           "isDefault": true
+//         },
+//         "problemMatcher": {
+//           "owner": "cpp",
+//           "fileLocation": [
+//             "relative",
+//             "${workspaceRoot}"
+//           ],
+//           "pattern": {
+//             "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+//             "file": 1,
+//             "line": 2,
+//             "column": 3,
+//             "severity": 4,
+//             "message": 5
+//           }
+//         }
+//       }
+//     ]
+//   }
+  
+
+// Author: Mehedi Hasan Shifat
+// Date: 11th Feb, 2020
+// Task: Shortcut to run a C++ file which will take input and show output of the program automatically with program runtime status such as memory consumption and execution time
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Compile and run",
+        "type": "shell",
+        "command": "bash",
+        "args": [
+          "-c",
+          "g++ -o jspwTest \"${file}\" && ./jspwTest < input.txt > output.txt && rm jspwTest"
+        ],
+        "presentation": {
+          "reveal": "never"
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": {
+          "owner": "cpp",
+          "fileLocation": [
+            "relative",
+            "${workspaceRoot}"
+          ],
+          "pattern": {
+            "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+            "file": 1,
+            "line": 2,
+            "column": 3,
+            "severity": 4,
+            "message": 5
+          }
+        }
+      }
+    ]
+  }
+  
